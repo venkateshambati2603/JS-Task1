@@ -1,0 +1,89 @@
+.all{
+    background: rgb(246, 231, 246);
+}
+.main{
+    width: 80%;
+    margin: 40px auto;
+   
+}
+.table{
+    margin-top: 5rem;
+    width: 80%;
+    margin: auto;
+    
+}
+table.list{
+    /* text-align: center; */
+    width: 100%;
+    background:rgb(249, 244, 244);
+}
+
+.typeRes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: column; */
+}
+.price{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-right: 2rem;
+}
+td{
+    border: 1px solid rgb(204,200,200);
+    text-align: left;
+    padding: 8px 15px;
+}
+
+tr:nth-child(even), table.list thread> tr{
+    background-color: rgb(204,200,200);
+}
+input[value="radio"]:checked{
+    display: block;
+}
+input[type="text"],input[type="number"]{
+    width:91%;
+    padding:20px 20px;
+    margin:8px 0;
+    display: inline-block;
+    border: 1px solid rgb(165,161,161);
+    border-radius: 4px;
+}
+
+input[type="submit"],input[type="reset"]{
+    background:blue;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+
+button{
+    /* float: right; */
+    background: blue;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    color: white;
+}
+.form_action--button{
+display: flex;
+justify-content: space-between;
+margin-right: 6rem;
+
+}
+button:hover{
+    background:#4b99d8 ;
+}

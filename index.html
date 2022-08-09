@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="all">
+     <div class="main">
+        <h1>Create Questions</h1>
+                <form autocomplete="off"  onsubmit="onFormSubmit()">
+                    <label for="question">Question</label>
+                    <div>
+                        <input type="text" name="question" id="question">
+                    </div>
+                    <label for="description">Description</label>
+                    <div>
+                        <input type="text" name="description" id="description">
+                    </div>
+                    
+                    <div class="typeRes">
+                        <div>
+                            <label for="type">Type</label>
+                            <input type="text" name="type" id="type">
+                        </div>
+                        <div class="price">
+                            <label for="response">Response</label>
+                            <input type="text" name="response" id="response">
+                        </div>
+                    </div>
+                    <div class="form_action--button">
+                        <div id="action">
+                            <!-- <button onClick="onEdit(this)">Edit</button> <button onClick="onDelete(this)">Delete</button> -->
+                        </div>
+                        <div>
+                            <input  type="submit" value="Add Note">
+                        </div>
+                        
+
+                        <!-- <input type="reset" value="Reset"> -->
+                    </div>
+                </form>
+            </div>
+      <div style="margin-top: 5rem;"  class="table">
+                    <table class="list" id="questionList">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Question</th>
+                                <th>Description</th>
+                                <th>Type</th>
+                                <th>Response</th>
+                            </tr>
+                        </thead>
+                        <tbody id="questionData">
+                            <!-- <th><label><input type="radio" id='regular' name="optradio"></label></th> -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
