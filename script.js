@@ -44,6 +44,7 @@ function insertNewRecord(data) {
     cell4 = newRow.insertCell(4);
 		cell4.innerHTML = data.response;
 }
+
 function show(){
     var x =document.getElementById('radio')
     console.log(x)
@@ -60,29 +61,46 @@ function onRadioSelect(value) {
     document.getElementById("type").value = createQuestions.cells[3].innerHTML;
     document.getElementById("response").value = createQuestions.cells[4].innerHTML;
 }
+
 function onSave(formData) {
+    var action= document.getElementById('action')
+    action.innerHTML =`<button onClick="onDelete(this)">Delete</button>`;
     createQuestions.cells[1].innerHTML = formData.question;
     createQuestions.cells[2].innerHTML = formData.description;
     createQuestions.cells[3].innerHTML = formData.type;
     createQuestions.cells[4].innerHTML = formData.response;
+    
 }
 
 function onEdit(){
     var action= document.getElementById('action');
-    action.innerHTML =`<button id="edit" onClick="onSave(this)">Save</button> <button onClick="onDelete(this)">Delete</button>`;
+    action.innerHTML =`<button id="edit" >Save</button> <button onClick="onDelete(this)">Delete</button>`;
 }
 
 function onDelete(td) {
-  
-        const element = document.getElementById("radio");
-    element.remove();
-
-        row = td.parentElement.parentElement;
-        document.getElementById('questionData').deleteRow(row,element.remove());
-        resetForm();
     
-}
+    row = td.parentElement.parentElement;
+        if(action&&row){
+            document.getElementById('questionData').deleteRow(row.rowIndex)
+            deleteRadio();
+            removeButton();
+            resetForm();
+        }
+        
 
+}
+function removeButton(){
+    const element = document.getElementById("action").innerHTML;
+    element.removeChild()
+    console.log(element)
+}
+function deleteRadio(){
+    
+    const element = document.getElementById("radio");
+    // element.remove();    
+    console.log(element)
+
+}
 function resetForm() {
     document.getElementById("question").value = '';
     document.getElementById("description").value = '';
